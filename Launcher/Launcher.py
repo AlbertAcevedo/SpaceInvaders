@@ -8,7 +8,7 @@ import os
 wn = turtle.Screen()
 wn.bgcolor("darkblue")
 wn.title("Space invaders")
-turtle.setup(800, 800)
+turtle.setup(700, 700) # Screen size
 
 # Draw border
 bpen = turtle.Turtle()
@@ -26,6 +26,15 @@ for side in range(4):
     bpen.fd(600)
     bpen.lt(90)
 bpen.hideturtle()
+
+#Create the player
+player = turtle.Turtle()
+player.color("green")
+player.shape("triangle")
+player.penup()
+player.speed(0)
+player.setposition(0, -250)
+player.setheading(90)
 
 # Keep window open until x is hit
 wn.mainloop()
